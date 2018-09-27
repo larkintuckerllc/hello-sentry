@@ -5,6 +5,8 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import * as Sentry from '@sentry/browser';
 
+// eslint-disable-next-line
+__webpack_public_path__ = process.env.NODE_ENV === 'production' ? '/hello-sentry/' : '/';
 const RELEASE = '0.1.0';
 Sentry.init({
   dsn: 'https://303c04eac89844b5bfc908ceffc6757c@sentry.io/1289887',
