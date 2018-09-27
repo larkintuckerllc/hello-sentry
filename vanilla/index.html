@@ -12,7 +12,11 @@
   <script>
     (function () {
       'use strict';
-      Sentry.init({ dsn: 'https://b5bf359072254626aba8e64368e77b7d@sentry.io/1289664' });
+      var RELEASE = '0.1.0';
+      Sentry.init({
+        dsn: 'https://b5bf359072254626aba8e64368e77b7d@sentry.io/1289664',
+        release: RELEASE,
+      });
       var helloEl = document.getElementById('hello');
       var errorEl = document.getElementById('error');
       var outputEl = document.getElementById('output');
