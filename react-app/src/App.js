@@ -4,6 +4,7 @@ import './App.css';
 import ErrorBoundary from './ErrorBoundary';
 import Hello from './Hello';
 import MyError from './MyError';
+import MyRenderError from './MyRenderError';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           </p>
           <Hello />
           <MyError />
+          <MyRenderError />
         </div>
       </ErrorBoundary>
     );
