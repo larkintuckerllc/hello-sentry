@@ -26,6 +26,9 @@ export default class Hello extends Component {
     try {
       throw new Error('Caught');
     } catch (err) {
+      if (process.env.NODE_ENV !== 'production') {
+        return;
+      }
       Sentry.captureException(err);
     }
   }
